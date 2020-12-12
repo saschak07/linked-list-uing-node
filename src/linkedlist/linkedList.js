@@ -39,6 +39,23 @@ class LinkedList{
         return slowNode
     }
 
+    reverse(){
+        if(!this.head){
+            console.log('cannot reverse an empty list')
+            return
+        }
+        var currentNode = this.head
+        var previous = null
+        var next = null
+        while(currentNode){
+            var next = currentNode.next
+            currentNode.next = previous
+            previous = currentNode
+            currentNode = next
+        }
+        this.head = previous;
+    }
+
     toArray(){
         const nodes = []
         let currentNode = this.head

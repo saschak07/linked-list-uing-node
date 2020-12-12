@@ -35,3 +35,13 @@ test('testing findMiddle', () => {
 
     expect(testlinkedList.findMiddle().toString()).toBe('1')
 })
+
+test('testing reverse', () => {
+    const testlinkedList = new linkedList()
+    testlinkedList.prepend(1)
+    testlinkedList.prepend(2)
+    testlinkedList.prepend(3)
+    testlinkedList.reverse()
+
+    expect(testlinkedList.toString()).toBe('1,2,3')
+})
