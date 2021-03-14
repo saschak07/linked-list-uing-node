@@ -57,3 +57,15 @@ test('testing reverse', () => {
 
     expect(testlinkedList.toString()).toBe('1,2,3')
 })
+
+test('testing remove', () => {
+    const testlinkedList = new linkedList()
+    testlinkedList.prepend(1)
+    testlinkedList.prepend(2)
+    testlinkedList.prepend(3)
+    testlinkedList.prepend(4)
+
+    testlinkedList.remove(3)
+
+    expect(testlinkedList.toString()).toBe('4,2,1')
+})
