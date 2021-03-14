@@ -56,6 +56,28 @@ class LinkedList{
         this.head = previous;
     }
 
+    remove(data){
+        let previous = this.head
+        let currentNode = this.head
+        let foundNode = false
+        while(currentNode){
+            var next = currentNode.next
+            if(currentNode.data === data){
+                if(currentNode === this.head){
+                    this.head = currentNode.next
+                }
+                previous.next = next
+                foundNode = true
+                return
+            }
+            previous = currentNode
+            currentNode = next
+        }
+        if(!foundNode){
+            console.log('node not found!')
+        }
+    }
+
     toArray(){
         const nodes = []
         let currentNode = this.head

@@ -25,6 +25,18 @@ test('testing append', () => {
     expect(testlinkedList.toString()).toBe('3,2,1,4')
 })
 
+test('testing remove', () => {
+    const testlinkedList = new linkedList()
+    testlinkedList.prepend(1)
+    testlinkedList.prepend(2)
+    testlinkedList.prepend(3)
+    testlinkedList.prepend(4)
+
+    testlinkedList.remove(3)
+
+    expect(testlinkedList.toString()).toBe('4,2,1')
+})
+
 test('testing findMiddle', () => {
     const testlinkedList = new linkedList()
     testlinkedList.prepend(1)
